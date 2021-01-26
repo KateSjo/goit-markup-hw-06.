@@ -126,6 +126,10 @@ body .container {
   box-sizing: border-box;
   border-radius: 50%;
   background-color: var(--primary-white-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .modal-button {
@@ -943,6 +947,10 @@ p {
   text-decoration: none;
 }
 
+.input-foot-container label {
+  margin-bottom: 0;
+}
+
 .footer-input {
   width: 358px;
   height: 50px;
@@ -1036,6 +1044,10 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea {
@@ -1047,6 +1059,10 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea::placeholder {
@@ -1058,15 +1074,11 @@ textarea::placeholder {
 
 label {
   display: flex;
-  margin-bottom: 4px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.16;
+  margin-bottom: 4px;
 
   color: var(--secondary-text-color);
-}
-
-.icon {
-  color: black;
 }
 
 .terms {
@@ -1098,15 +1110,15 @@ label {
   border-radius: 4px;
 }
 
-.policy .icon {
-  font-size: 14px;
-}
-
 .modal-icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field .input:focus,
@@ -1126,19 +1138,16 @@ label {
   position: absolute;
 }
 
-.modal-policy {
-  display: flex;
-  align-items: center;
-
-  font-size: 12px;
-  line-height: 1.71;
-  color: var(--secondary-text-color);
-}
-
 .policy {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+}
+
+.modal-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 .modal-checkbox ~ span::before {
@@ -1146,10 +1155,13 @@ label {
   display: inline-flex;
   width: 16px;
   height: 15px;
-  margin-right: 8px;
+  margin-right: 7px;
 
   border: 2px solid var(--primary-text-color);
-  border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked + span::before {
@@ -1160,3 +1172,6 @@ label {
   border: 2px solid var(--accent-color);
 }
 
+.modal-checkbox:hover ~ span::before {
+  border: 2px solid var(--accent-color);
+}
