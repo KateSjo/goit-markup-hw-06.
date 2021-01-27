@@ -233,8 +233,9 @@ body .container {
   bottom: 0;
   left: 0;
   align-items: center;
+  justify-content: center;
 
-  padding: 27px 0;
+  display: flex;
 
   width: 100%;
   height: 70px;
@@ -378,10 +379,6 @@ body .container {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
-  transition-property: fill, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comanda-item {
@@ -391,6 +388,10 @@ body .container {
 .comanda-icon {
   width: 20px;
   height: 20px;
+
+  transition-property: fill, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comanda.item {
@@ -495,6 +496,10 @@ a {
   padding-bottom: 32px;
   display: block;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-auth {
@@ -1172,6 +1177,7 @@ label {
   border: 2px solid var(--accent-color);
 }
 
-.modal-checkbox:hover ~ span::before {
+.modal-checkbox:hover ~ span::before,
+.modal-checkbox:focus ~ span::before {
   border: 2px solid var(--accent-color);
 }
